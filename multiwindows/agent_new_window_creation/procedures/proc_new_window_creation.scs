@@ -1,0 +1,20 @@
+scp_program -> proc_new_window_creation
+(*
+	-> rrel_params: ...
+	(*
+		-> rrel_1: rrel_out: _window;;
+	*);;
+
+	-> rrel_operators: ... 
+	(*
+		-> rrel_init: .proc_new_window_creation_operator0
+		(*
+			<- genEl;;
+		    -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _window;;
+
+		  	=> nrel_goto: .proc_new_window_creation_operator_return;;
+		*);;
+		
+		-> .proc_new_window_creation_operator_return(*<-return;;*);;
+	*);;
+*);;
