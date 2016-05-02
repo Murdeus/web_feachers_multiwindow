@@ -1,0 +1,5 @@
+sc_node_norole_relation->nrel_windows;;
+
+nrel_windows => nrel_main_idtf:
+	[пользовательские окна*](* <-lang_ru;; *);
+	[nrel_windows](* <-lang_en;; *);;

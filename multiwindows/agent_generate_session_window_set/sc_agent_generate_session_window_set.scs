@@ -1,0 +1,53 @@
+sc_agent_generate_session_window_set
+	=>nrel_main_idtf:
+		[агент генерации множества окон пользователя] (* <- lang_ru;; *);
+		[sc-agent generating user's windows set] (* <- lang_en;; *);
+<- abstract_sc_agent;
+=>nrel_primary_initiation_condition: (sc_event_add_output_arc => ui_user);
+
+=>nrel_initiation_condition_and_result: (
+	..sc_agent_generate_session_window_set_initiation_condition => ..sc_agent_generate_session_window_set_result
+	);
+	
+<= nrel_sc_agent_key_sc_elements:
+	{
+	question_initiated;
+	question;
+	ui_user
+	};
+	
+<- key_sc_element:
+	...
+	(*
+	<- sc_description_of_sc_agent_behavior;;
+	<= nrel_sc_text_translation:
+			...
+			(*
+			->rrel_example:
+			[Задачей sc-агента является генерация множества окон пользователя.];;
+			*);;
+	*);
+	
+=>nrel_inclusion: ...
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program:
+		{
+		agent_generate_session_window_set
+		};;
+	->sc_agent_generate_session_window_set (* <- active_sc_agent;; *);;	
+	*);;
+	
+	
+// условия инициирования агента
+	..sc_agent_generate_session_window_set_initiation_condition
+	= [*
+	ui_user _-> .._question;;
+	*];;
+	
+// описание результатов выполнения sc-агента
+	..sc_agent_generate_session_window_set_result
+	= [*
+	*];;
+
+

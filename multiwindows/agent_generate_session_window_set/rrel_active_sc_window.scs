@@ -1,0 +1,5 @@
+sc_node_role_relation->rrel_active_sc_window;;
+
+rrel_active_sc_window => nrel_main_idtf:
+	[активное sc-окно*](* <-lang_ru;; *);
+	[active sc-window](* <-lang_en;; *);;
